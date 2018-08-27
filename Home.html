@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="WHy i love NYC">
+	  <meta name="keywords" content="NYC, sights, boroughs">
+  	<meta name="author" content="Nicholas Zhmakin">
+    <title> New York City | Home </title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Icon Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/CSSHome.css">
+    <!-- Animation on skroll AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS -->
+    <script src="JS/jsHome.js" defer></script>
+    
+  </head>
+
+<body id="switchBody">
+
+
+<header>
+
+<div class="overlayHeader"></div>
+  
+<!-- NavBar -->
+<nav>
+<ul class="mainList">
+  <li><a class="active" href="Home.html">Home</a></li>
+  <li><a href="Sights.html"> Sights </a></li>
+  <li class="drop"> <a href="javascript:void(0)">The Boroughs <i class="fas fa-caret-down"></i> </a> 
+        <ul>  
+          <li><a href="TheBronx.html"> The Bronx <i class="fas fa-arrow-left"></i> </a></li>
+          <li><a href="Brooklyn.html"> Brooklyn <i class="fas fa-arrow-left"></i></a></li>
+          <li><a href="Manhattan.html"> Manhattan <i class="fas fa-arrow-left"></i></a></li>
+          <li><a href="Queens.html"> Queens <i class="fas fa-arrow-left"></i> </a></li>
+          <li><a href="StatenIsland.html"> Staten Island <i class="fas fa-arrow-left"></i></a></li>
+        </ul>
+  </li>
+</ul>
+</nav>
+
+
+<!-- Blocks on Header in Grid -->
+<div class="gridHeader">
+
+<!-- Text + CheckBox Day/Night -->
+<div class="gridHeaderText">
+  <h1> New York City</h1>
+  <p> The Big Apple <i class="fab fa-apple"></i>  </p>
+  
+<label class="switch">
+  <input class="inputDayNight" type="checkbox">
+  <span  class="slider round"></span>
+  <div class="tooltip">
+  <span class="tooltiptext">Click to change Header</span> 
+  </div>
+</label>
+</div>
+
+
+<!-- 3D Card Flag+Seal -->
+<div class="gridHeaderImg">
+ <div class="maincontainer">
+  <div class="thecard">
+
+    <div class="thefront">
+      <h1>The Flag of New York City</h1>
+      <img src="img/Header/flag.png" alt="Flag">
+    </div>
+
+    <div class="theback">
+      <h1>The Seal of New York City</h1>
+      <img src="img/Header/seal.png" alt="Seal">
+    </div>
+
+  </div>
+ </div>
+</div>
+
+</header>
+
+
+
+
+<!-- Letter why New York -->
+<div id="letterSect" data-aos="zoom-out">
+<div class="letter">w</div>
+<div class="letter">h</div>
+<div class="letter">y</div>
+<div class="letter"></div>
+<div class="letter">n</div>
+<div class="letter">e</div>
+<div class="letter">w</div>
+<div class="letter"></div>
+<div class="letter">y</div>
+<div class="letter">o</div>
+<div class="letter">r</div>
+<div class="letter">k</div>
+<div class="letter">?</div>
+</div>
+
+<!-- Main Information -->
+<section id="gridSect">
+   
+
+<!-- Inspiration -->
+<div class="box box1" data-aos="zoom-in-right">
+  <div class="nestedBox1">
+    <h1>Inspiration</h1>
+    <p> New York has a way of giving me a feeling that I can accomplish
+      anything I set out to do. On an ordinary day when I step outside
+      my apartment building, I might find inspiration in any place –
+      on the street, in the subway, at a Broadway show or in a sidewalk
+      café. A plethora of inspiring, smart, creative people dwell
+      in the nooks and crannies of this city.</p>
+  </div>     
+</div>
+
+
+<!-- Icons -->
+
+<div class="box box2" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+               
+  <div class="fun">
+    <div class="fas fa-cocktail"> </div>
+    <h2>Night Life</h2>
+  </div>
+    
+    
+  <div class="fun">
+    <div class="fas fa-ticket-alt"> </div> 
+    <h2>Broadway</h2>
+  </div>   
+      
+
+  <div class="fun">
+    <div class="fas fa-shopping-bag"> </div> 
+    <h2>Shopping</h2>           
+  </div>
+
+  <div class="fun">
+    <div class="fas fa-utensils"> </div> 
+    <h2>Restaurants</h2>
+  </div>
+
+  <div class="fun">
+    <div class="fas fa-camera-retro"> </div> 
+    <h2>Attraction</h2>
+  </div>
+
+  <div class="fun">
+    <div class="fas fa-object-group"> </div> 
+    <h2>Museum&amp;Galleries</h2>
+  </div>
+
+</div>
+
+<!-- Bars -->
+
+<div class="box box3" data-aos="zoom-in-left">
+
+  <div class="skillBar">
+    <h4>Infrastructure</h4>
+    <div class="line stripesLoader" style="background-position:83%; 
+    background-color:green"> </div>
+  </div>
+
+  <div class="skillBar">
+    <h4>Perspective</h4>
+    <div class="line stripesLoader" style="background-position:98%;
+    background-color:rgb(0, 9, 128)"> </div>
+  </div>
+  
+  <div class="skillBar">
+    <h4>Safeness</h4>
+    <div class="line stripesLoader" style="background-position:75%;
+    background-color:rgb(214, 6, 6)"> </div>
+  </div>
+
+  <div class="skillBar">
+    <h4>Entertainment</h4>
+    <div class="line stripesLoader" style="background-position:90%;
+    background-color:rgb(107, 0, 128)"> </div>
+  </div>
+  
+  <div class="skillBar">
+    <h4>Diversity</h4>
+    <div class="line stripesLoader" style="background-position:97%;
+    background-color:rgb(189, 201, 21)"> </div>
+  </div>
+
+  <div class="skillBar">
+    <h4>Sights</h4>
+    <div class="line stripesLoader" style="background-position:95%;
+    background-color:rgb(199, 75, 3)"> </div>
+  </div>
+      
+</div>
+
+
+<!-- Stars -->
+
+<div class="box box4" data-aos="flip-left">
+  <button id="modalBtn" class="starBtn"> <i class="fas fa-star"></i> </button>
+  <div  class="clickButton">Click Button</div>
+</div>
+
+<div id="simpleModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="closeBtn">&times; </span> 
+
+  <div class="stars">
+
+    <div class="star1 star">
+      <img src="img/Home/Stars/star1.jpg" alt="star" class="starImg">
+      <div class="starDes"> <p>Justin Timberlake</p> </div>  
+    </div>
+
+    <div class="star2 star">
+      <img src="img/Home/Stars/star2.jpeg" alt="star" class="starImg">
+      <div class="starDes"> <p>Jennifer Lawrence</p> </div> 
+    </div>
+
+    <div class="star3 star">
+      <img src="img/Home/Stars/star3.jpg" alt="star" class="starImg">
+      <div class="starDes"><p>Lady Gaga</p> </div> 
+    </div>
+
+    <div class="star4 star">
+      <img src="img/Home/Stars/star4.jpeg" alt="star" class="starImg">
+      <div class="starDes"> <p> Hugh Jackman </p> </div> 
+    </div>
+
+    <div class="star5 star">
+      <img src="img/Home/Stars/star5.jpg" alt="star" class="starImg">
+      <div class="starDes"> <p> Emma Stone  </p> </div> 
+    </div>
+                
+    <div class="star6 star">
+      <img src="img/Home/Stars/star6.jpg" alt="star" class="starImg">
+      <div class="starDes"> <p>  Woody Allen </p> </div> 
+    </div>
+
+  </div>
+   
+    <div class="starExpl"> Some celebrities who live in NYC </div>
+         
+  </div>     
+</div>
+
+<!-- Creativity and Innovation -->  
+<div class="box box11" data-aos="flip-left">
+
+  <div class="box11Des">
+    <h1> Creativity &amp; Innovation</h1>
+    <p>Space constraints make New York creative with the cultural hot spots. 
+      Thanks to the city’s general sense of crammed-in-ness, planners often seek
+      innovative solutions, reclaiming disused or run-down spaces<br>and transforming
+      them into cultural-landscape enrichments. Socrates<br>Sculpture Park,for example,<br>
+      opened atopa former<br>garbage dump in<br>Long Island<br>City.</p>
+  </div>
+</div>
+
+
+ <!-- Opportunities -->
+
+<div class="box box5" data-aos="zoom-in-left" >
+              
+  <div class="desBox5">
+  <h2>Opportunities <br> are <br> Endless </h2>
+  <p> New York has everything from the Rockettes, every early morning,
+    noon and late night show, Broadway, 5th Avenue, landmarks and so
+    much more. </p>
+    <br>
+    <p> New York has a way of giving me a feeling that I can
+    accomplish anything I set out to do.</p>
+  </div>
+  <img src="img/Home/box5.jpeg" alt="openStore">
+        
+</div>
+
+ <!-- Songs -->
+
+<div class="box box6" data-aos="zoom-in-left">
+<div class="sound"> <h3>Some song about <br> New York City</h3></div>
+    
+  <div class="sound">
+    <p> Empire State of Mind - Jay-Z </p>
+      <audio controls>
+        <source src="sound/Empire.mp3" type="audio/mpeg">
+        <source src="sound/Empire.ogg" type="audio/ogg">
+      </audio> 
+  </div>
+  
+  <div class="sound">
+    <p>Once upon a Time in NYC - Hues Lewis</p>
+      <audio controls>
+        <source src="sound/Oliver.mp3" type="audio/mpeg">
+        <source src="sound/Oliver.ogg" type="audio/ogg">
+      </audio> 
+  </div>
+
+  <div class="sound">
+    <p> Englishman in New York - Sting </p> 
+      <audio controls>
+        <source src="sound/Sting.mp3" type="audio/mpeg">
+        <source src="sound/Sting.ogg" type="audio/ogg">
+    </audio> 
+  </div>
+
+  <div class="sound">
+    <p>Welcome to New York - Taylor Swift </p>
+      <audio controls>
+        <source src="sound/Swift.mp3" type="audio/mpeg">
+        <source src="sound/Swift.ogg" type="audio/ogg">
+      </audio> 
+  </div>
+
+  <div class="sound">
+    <p> New York City - The Chainsmokers </p>
+      <audio controls>
+        <source src="sound/Chainsmokers.mp3" type="audio/mpeg">
+        <source src="sound/Chainsmokers.ogg" type="audio/ogg">
+      </audio> 
+    </div>
+  
+</div>
+      
+<!-- Diversity -->           
+
+<div class="box box7" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+  <div class="diversity">
+    <span >D</span>
+    <span >i</span>
+    <span >v</span>
+    <span >e</span>
+    <span >r</span>
+    <span >s</span> 
+    <span >i</span>
+    <span >t</span>
+    <span >y</span>   
+  </div>
+  
+<div class="diversityGrid">
+
+  <div class="diversityBox1">
+      <div class="textBox7 text1Box7">One of the city's greatest attributes is its diversity, and NYC
+          is often thought of as America's melting pot.
+      </div>
+    </div>
+
+    <div class="diversityBox2"> 
+      <div class="textBox7 text2Box7">About 36 percent of
+          New York's denizens hail from other countries, and you can hear
+          as many as 800 languages spoken.
+      </div>
+    </div>
+
+    <div class="diversityBox3"> 
+        <div class="textBox7 text3Box7">I love how each person has his
+          or her own New York Story, whether they're a native, an immigrant
+          or a transplant..
+        </div>
+    </div>
+    
+  </div>
+
+</div>
+
+      
+<!-- I love NY--> 
+
+<div class="box box8" data-aos="zoom-in-right">
+                
+  <div class="desBox8">
+    I <i class="fas fa-heart"></i> <br>  NY
+  </div>
+            
+</div>
+
+<!-- Slide Show -->  
+
+ 
+<div class="box box9" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+    <div class="mySlides fade">
+      <img src="img/Home/slide1.jpeg">
+      <div class="sliderText">Fascinating</div>
+    </div>
+      
+    <div class="mySlides fade">
+      <img src="img/Home/slide2.jpeg">
+      <div class="sliderText">Terrific</div>
+    </div>
+      
+    <div class="mySlides fade">
+      <img src="img/Home/slide3.jpeg">
+      <div class="sliderText">Breathtaking</div>
+    </div>
+      
+    <a class="prev" onclick = "plusSlides(-1)" >&#10094; </a>
+    <a class="next" onclick = "plusSlides(1)" >&#10095; </a>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</div>
+    
+
+
+<!-- Video Alive -->  
+  
+<div class="box box10" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+  <video class="box10video" loop="loop" autoplay="" muted="">
+    <source src="Video/NewYorkCity.mp4" type="video/mp4" />
+  </video>
+
+  <div class="box10Des">
+    <h1>New York is alive!</h1>
+    <p>There is no other way to describe it. Every time I visit there is
+        always something new. New York offers unprecedented opportunities for
+        craziness. It has an energy like no other city in the world. There’s no
+        other city that could compete with the energy in New York. The fast pace,
+        the buzzing traffic, the hustle and bustle of the people, the 24-hour
+        life, make NYC one of the most vibrant places in the world.
+        <br> <br>
+    <q><i> One belongs to New York instantly, one belongs to it as much in five minutes
+      as in five years.</q> — Tom Wolfe</i> </p>
+            
+  </div>
+</div>
+
+
+
+
+  
+</section>  
+
+  
+<footer>  
+
+<div class="footercollum">
+  <h2>State</h2>
+  <ul>
+    <li>Ukraine</li> <br> <br>
+    <li>Dnipro</li> <br> <br> <br> <br> <br>
+    <li>Copyright &copy; 2018</li>
+  </ul>
+</div>
+
+<div class="footercollum">
+  <h2>Follow us</h2>
+  <ul>
+    <li><a href="#" class="fab fa-facebook-f"></a>Facebook</li>
+    <li><a href="#"class="fab fa-twitter"></a>Twitter </li>
+    <li><a href="#"class="fab fa-google-plus-g"></a>Google </li>
+  </ul>
+</div>
+
+<div class="footercollum">
+  <h2>Contact</h2>
+  <ul>
+    <li> <i class="fas fa-mobile-alt"></i>+38 095 629 22 42</li>
+    <li> <i class="far fa-envelope-open"></i>nikespecter@gmail.com</li>
+  </ul>
+</div>
+
+<div class="footercollum">
+  <div class="loginBox">
+    <img src="img/Footer/login.png" alt="Login">
+    <h2>Want more?</h2>
+
+  <form>
+    <p>Username</p>
+    <input type="text" name="" placeholder="Enter Username">
+    <p> Email </p>
+    <input type="email" name="" placeholder="Enter Email">
+    <input type="submit" name="" value="Sing up">
+    <a href="#">Some problem?</a>
+  </form>
+  
+  </div>
+</div>
+
+<!-- Arrow Up -->
+<div id="up"> <i class="fas fa-chevron-circle-up"></i></div>
+
+</footer>
+
+
+
+</body>
+</html>

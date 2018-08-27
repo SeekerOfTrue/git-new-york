@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="WHy i love NYC">
+	  <meta name="keywords" content="NYC, sights, boroughs">
+  	<meta name="author" content="Nicholas Zhmakin">
+    <title> New York City | Sights </title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Icon Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/CSSSights.css">
+    <!-- Animation on skroll AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS -->
+    <script src="JS/jsSights.js" defer></script>
+    
+  </head>
+
+<body id="switchBody">
+
+
+<header>
+
+<div class="overlayHeader"></div>
+  
+<!-- NavBar -->
+<nav>
+<ul class="mainList">
+  <li><a href="Home.html">Home</a></li>
+  <li><a class="active" href="Sights.html"> Sights </a></li>
+  <li class="drop"> <a href="javascript:void(0)">The Boroughs <i class="fas fa-caret-down"></i> </a> 
+        <ul>  
+          <li><a href="TheBronx.html"> The Bronx <i class="fas fa-arrow-left"></i> </a></li>
+          <li><a href="Brooklyn.html"> Brooklyn <i class="fas fa-arrow-left"></i></a></li>
+          <li><a href="Manhattan.html"> Manhattan <i class="fas fa-arrow-left"></i></a></li>
+          <li><a href="Queens.html"> Queens <i class="fas fa-arrow-left"></i> </a></li>
+          <li><a href="StatenIsland.html"> Staten Island <i class="fas fa-arrow-left"></i></a></li>
+        </ul>
+  </li>
+</ul>
+</nav>
+
+
+<!-- Blocks on Header in Grid -->
+<div class="gridHeader">
+
+<!-- Text + CheckBox Day/Night -->
+<div class="gridHeaderText">
+  <h1> New York City</h1>
+  <p> The Big Apple <i class="fab fa-apple"></i>  </p>
+  
+<label class="switch">
+  <input class="inputDayNight" type="checkbox">
+  <span  class="slider round"></span>
+  <div class="tooltip">
+  <span class="tooltiptext">Click to change Header</span> 
+  </div>
+</label>
+</div>
+
+
+<!-- 3D Card Flag+Seal -->
+<div class="gridHeaderImg">
+ <div class="maincontainer">
+  <div class="thecard">
+
+    <div class="thefront">
+      <h1>The Flag of New York City</h1>
+      <img src="img/Header/flag.png" alt="Flag">
+    </div>
+
+    <div class="theback">
+      <h1>The Seal of New York City</h1>
+      <img src="img/Header/seal.png" alt="Seal">
+    </div>
+
+  </div>
+ </div>
+</div>
+
+</header>
+
+
+<!-- Title Sight of NYC -->
+<section id="sights">
+
+<h1>Sights of <span>York City </span> </h1>
+
+</section>
+
+
+<!-- Times Square -->
+<section id="timesSq">
+  
+  <img src="img/Sights/timesSq.jpg" alt="Times Square" class="imageTimes">      
+  <div class="overlayTimes"></div>
+  <div class="textTimes">
+    <h1>Times Square </h1>
+    <p> As far as city districts go, Times Square—New York’s busiest attraction—is a global legend. Rightfully so, since it’s the cinematic epicenter of NYC tourism, including the best Broadway shows and photo opportunities with The Naked Cowboy (yee-haw).
+    Its fabled days of epic squalor are a distant memory, but there's still plenty of spectacle to appreciate, especially during the holiday season. Some of the biggest NYC events in December take place in Times Square (i.e. New Year’s Eve). And while locals may disagree, it’s the home to some of the best restaurants in NYC. </p>
+  </div>
+    
+</section>
+
+
+<!-- Museum Cards -->
+
+
+<section id="museum">
+
+  <div class="cardMuseum">
+      <img src="img/Sights/met.jpg" alt="star" class="imgM">
+      <button class="cardBtm cardBtm1">More</button>
+      <h2> Metropolitan Museum of Art </h2>          
+  </div>
+
+
+  <div class="cardMuseum">
+    <img src="img/Sights/memorial.jpg" alt="star" class="imgM">
+    <button class="cardBtm cardBtm2">More</button>
+    <h2> 9/11 Memorial and Museum </h2>   
+  </div>
+
+ <div class="cardMuseum">
+     <img src="img/Sights/rockerfeller.jpg" alt="star" class="imgM">
+     <button class="cardBtm cardBtm3">More</button>
+     <h2> Rockefeller Center and Top of the Rock Observation Deck </h2>
+ </div>
+      
+</section>
+
+
+<!-- Statue of Liberty -->
+
+<section id="statue">
+    <div class="desStatue" data-aos="flip-left">
+      <h1>Statue of Liberty</h1>
+      <p> The Statue of Liberty was France's gift to America. Built in 1886, it remains a famous world symbol of freedom and one of the greatest American icons. It is one of the world's largest statues, standing just under 152 feet tall from the base to the torch, and weighing approximately 450,000 pounds.</p>
+      <div class="buttomStatue"> Read more </div>
+    </div>         
+</section>
+
+
+<!-- Empire State Building -->
+<section id="empire">
+
+  <div id="desEmpire" data-aos="flip-up">
+
+  <div id="showText" class="">
+
+  <h1>Empire State Building</h1>
+  <p> The Empire State Building is a 102-story[b] Art Deco skyscraper in Midtown Manhattan, New York City. Designed by Shreve, Lamb &amp; Harmon and completed in 1931, the building has a roof height of 1,250 feet (380 m) and stands a total of 1,454 feet (443.2 m) tall, including its antenna. Its name is derived from "Empire State", the nickname of New York. As of 2017 the building is the 5th-tallest completed skyscraper in the United States and the 28th-tallest in the world. It is also the 6th-tallest freestanding structure in the Americas.</p> <p> The Empire State Building stood as the world's tallest building for nearly 40 years until the completion of the World Trade Center's North Tower in Lower Manhattan in late 1970. Following the September 11 attacks in 2001, it was again the tallest building in New York until the new One World Trade Center was completed in April 2012.</p>
+          
+  </div>
+    <div id="buttomEmpire"> Show more </div>
+  </div>
+    
+  <div class="empImg" data-aos="flip-down"> 
+
+  <div class="comper">
+    <img src="img/Sights/Empire/empire1.jpg" alt="">
+  </div>
+
+  <div class="comper changeSize">
+    <img src="img/Sights/Empire/empire2.jpg" alt="">
+  </div>
+    
+  </div>
+        
+</section>
+
+
+<!-- Brooklyn Bridge-->
+<section id="brooklyn"> 
+
+  <div class="desBrooklyn">
+    <h1>Brooklyn Bridge</h1>
+    <p> The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City and is one of the oldest roadway bridges in the United States. </p>
+    <div class="hoverBrooklyn">Hover</br>me!</div>
+  </div>
+
+<div class="leftBr"></div>
+<div class="rightBr"></div> 
+        
+</section>
+
+
+<!-- Broadway -->
+
+<section id="broadway">
+
+
+<div class="signboard">
+  <div class="wireleft wire">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      </ul>
+  </div>
+
+
+  <div class="desBroadway">
+    <h1 class="neon-heading first"><span class="flickering-3">W</span>el<span class="flickering-1">c</span>om<span class="flickering-3">e</span><span class="flickering-2">  t</span>o</h1>
+    <h1 class="neon-heading second">Broadway</h1>
+  </div>
+
+     
+  <div class="wireright wire">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+  </div>
+
+</div>
+
+<div id="broadwaySlider">
+    <div id="rowSlider">
+  
+      <img src="img/Sights/Broadway/broad1.jpg" alt="">
+      <img src="img/Sights/Broadway/broad2.jpg" alt="">
+      <img src="img/Sights/Broadway/broad3.jpg" alt="">
+      <img src="img/Sights/Broadway/broad4.jpg" alt="">
+      <img src="img/Sights/Broadway/broad5.jpg" alt="">
+      <img src="img/Sights/Broadway/broad6.jpg" alt=""> 
+      <img src="img/Sights/Broadway/broad7.jpg" alt="">
+      <img src="img/Sights/Broadway/broad8.jpg" alt="">
+      <img src="img/Sights/Broadway/broad9.jpg" alt="">
+
+    </div>
+</div>
+<div id="iconArrow"> <i class="fas fa-sign-in-alt"></i> </div>
+  
+</section>
+
+
+<!-- Central park -->
+<section id="park">
+      
+ 
+  <div class="block block2" data-aos="zoom-out-up">   </div>
+  <div class="block block3" data-aos="zoom-out-up">  </div>
+  <div class="block block4" data-aos="zoom-out-up"> </div>
+  <div class="block block5" data-aos="zoom-out-up"> </div>
+  <div class="block block1" data-aos="zoom-out-up"> Central park </div>
+  <div class="block block6" data-aos="zoom-out-up"> </div>
+  <div class="block block7" data-aos="zoom-out-up"> </div>
+  <div class="block block8" data-aos="zoom-out-up"> </div>
+  <div class="block block9" data-aos="zoom-out-up"> </div>
+  <div class="block block10" data-aos="zoom-out-up"> </div>  
+
+</section>
+
+
+
+<footer>  
+
+  <div class="footercollum">
+    <h2>State</h2>
+    <ul>
+      <li>Ukraine</li> <br> <br>
+      <li>Dnipro</li> <br> <br> <br> <br> <br>
+      <li>Copyright &copy; 2018</li>
+    </ul>
+  </div>
+  
+  <div class="footercollum">
+    <h2>Follow us</h2>
+    <ul>
+      <li><a href="#" class="fab fa-facebook-f"></a>Facebook</li>
+      <li><a href="#"class="fab fa-twitter"></a>Twitter </li>
+      <li><a href="#"class="fab fa-google-plus-g"></a>Google </li>
+    </ul>
+  </div>
+  
+  <div class="footercollum">
+    <h2>Contact</h2>
+    <ul>
+      <li> <i class="fas fa-mobile-alt"></i>+38 095 629 22 42</li>
+      <li> <i class="far fa-envelope-open"></i>nikespecter@gmail.com</li>
+    </ul>
+  </div>
+  
+  <div class="footercollum">
+    <div class="loginBox">
+      <img src="img/Footer/login.png" alt="Login">
+      <h2>Want more?</h2>
+  
+    <form>
+      <p>Username</p>
+      <input type="text" name="" placeholder="Enter Username">
+      <p> Email </p>
+      <input type="email" name="" placeholder="Enter Email">
+      <input type="submit" name="" value="Sing up">
+      <a href="#">Some problem?</a>
+    </form>
+    
+    </div>
+  </div>
+  
+<!-- Arrow Up -->
+<div id="up"> <i class="fas fa-chevron-circle-up"></i></div>
+
+
+</footer>
+        
+
+
+ </body>
+ </html>

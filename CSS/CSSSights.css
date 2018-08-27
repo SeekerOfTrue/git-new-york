@@ -1,0 +1,1614 @@
+/* Import font*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:200');
+@import url('https://fonts.googleapis.com/css?family=Sancreek');
+@import url('https://fonts.googleapis.com/css?family=Amarante');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+* {
+  box-sizing: border-box;
+}
+
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #8e9eab;
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+  width: 100%;;
+}
+
+
+header{
+  width:100%;
+  background-image: url("../Img/Header/header.jpg");
+  height: 700px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  transition: all 0.8s ease;
+ 
+}
+
+.overlayHeader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  background-color: rgb(0, 0, 0);
+  z-index: -1;
+}
+
+.gridHeader {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1, minmax(500px, auto));
+  align-content: center;
+  grid-gap: 15px;
+  text-align: center;
+}
+
+.gridHeaderText {
+  padding: 20px;
+  transition: all 0.8s ease;
+}
+
+.gridHeaderText h1 {
+  padding: 0;
+  margin: 0;
+  color:  rgb(255, 255, 255);
+  font-size: 75px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 900;
+  letter-spacing: 20px;
+}
+
+.gridHeaderText p {
+  font-weight: bold;
+  color: 	rgba(245, 245, 245, 0.658);
+  font-size: 50px;
+  font-family: 'Cookie', cursive;
+}
+
+
+.fa-apple {
+  color: red;
+}
+
+
+/* On/Off Switch */
+
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+}
+
+.inputDayNight {
+  display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(5, 1, 1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 3;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* 3D cards */
+
+.gridHeaderImg {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.maincontainer{
+  width: 400px;
+  height: 260px;
+  background: none;
+}
+
+.thecard{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+.thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border: 3px outset white;
+}
+
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  transform: rotateY(180deg);
+  background: #fafafa;
+  border: 3px outset rgb(2, 4, 110);
+}
+
+.thefront img, .theback img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+
+.thefront h1, .theback h1{
+  max-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* Toggle class */
+
+.headerNight {
+  background-image: url("../Img/Header/headerNight.jpeg");
+ }
+
+.navShadow {
+  box-shadow: 0px 6px 13px 0px rgba(221,255,0,1);
+  border: none;
+}
+
+ .light{
+  text-shadow: 1px 1px 2px yellow, 0 0 25px yellow, 0 0 5px yellow;
+ }
+
+ .lightBox {
+  box-shadow: 0px 0px 19px 4px rgba(221,255,0,1);
+ }
+
+
+/* Style the navigation bar */
+
+nav {
+  position: absolute;
+  top: 0;
+  border-bottom: 1px solid #8B008B;
+  width: 100%;
+  transition: all 0.8s ease;
+  background: rgba(0, 255, 255, 0.5); /* For browsers that do not support gradients */
+  background: linear-gradient(to bottom right, rgba(0, 255, 191, 0.3), rgba(6, 101, 243, 0.3));
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.mainList {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, auto));
+  justify-content: space-evenly;
+  margin: 0;
+ 
+}
+
+nav ul.mainList li {
+  text-align: center;
+  text-transform: uppercase; 
+  position: relative;
+  line-height: 50px;
+
+}
+
+nav ul.mainList li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav ul.mainList li a.active {
+  background-color: #9400D3;
+}
+
+nav ul.mainList li a:hover {
+  background-color: rgb(48, 206, 206);
+  color: #9400D3;
+  transition: 700ms ease;
+}
+
+.fa-caret-down {
+  position: relative;
+}
+
+li.drop ul {
+  list-style-type: none;
+  left: -40px;
+  position: absolute;
+  z-index: 2;
+ 
+}
+
+
+li.drop ul li {
+  border-bottom: 1px solid black;
+  background: rgb(255, 255, 255);
+  display: none;
+  opacity: 0;
+  width: 213px;
+  line-height: 0px;
+  animation: dropLoad 1s forwards;
+}
+
+li.drop ul li a {
+  color: rgb(106, 3, 165);
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+li.drop ul li a:hover {
+  background: rgb(211, 211, 211);
+}
+
+nav ul.mainList li:hover ul li {
+ display: block;
+}
+
+
+@keyframes dropLoad {
+  0% {
+    transform: scale(2,2) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1,1) rotateX(0deg);
+  }
+}
+
+
+li.drop ul li:first-child {
+  animation-delay: 0s;
+}
+
+li.drop ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+li.drop ul li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+li.drop ul li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+li.drop ul li:last-child {
+  animation-delay: 0.8s;
+}
+
+
+.fa-arrow-left {
+  opacity: 0;
+  color: black;
+}
+
+li.drop ul li a:hover .fa-arrow-left  {
+  opacity: 1;
+}
+
+#up {
+
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 26px;
+  
+}
+
+
+/* Sights  */
+
+#sights {
+  background: #000;
+  padding: 5px;
+  border-bottom: 2px solid rgba(213, 216, 26, 0.637);
+  height: auto;
+}
+
+#sights h1 {
+  font-weight: 900;
+  font-family: 'Great Vibes', cursive;
+  color: rgb(60, 255, 0);
+  font-size: 80px;
+  letter-spacing: 20px;
+  text-align: center;
+  word-spacing: 30px;
+}
+
+
+#sights h1 span {
+  color: rgb(0, 255, 242);
+  
+}
+
+/*  Times Square */
+
+
+#timesSq {
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 48% 90%, 0 100%, 0 0);
+  z-index: 10;
+  margin-bottom: -8vw;
+  height: 1000px;
+ 
+}
+
+.imageTimes {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayTimes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  background-color: rgb(223, 240, 75);
+ }
+
+
+.textTimes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  text-indent: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 25px;
+  background-color: #000000cb;
+  line-height: 30px;
+  border: 2px outset rgb(182, 0, 0);
+  
+  
+}
+
+.textTimes h1 {
+    text-align: center;
+    line-height: 35px;
+    color: rgb(182, 0, 0);
+    text-indent: 0px;
+    font-size: 70px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+
+/* Cards of Museum */
+
+#museum {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 400px));
+  grid-template-rows: repeat(1, minmax(500px, auto));
+  grid-gap: 30px;
+  padding: 200px 30px;
+  justify-content: space-evenly;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url('../img/Sights/museumBack.jpeg')  no-repeat;
+  background-size: cover;
+  z-index: 9;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  margin-bottom: -5vw;
+  
+}
+
+.cardMuseum {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  background: #ffffff;
+  border: 3px solid rgb(255, 255, 255);
+  border-bottom: 4px solid rgb(255, 0, 64);
+  border-radius: 70px  0 70px 0;
+  position: relative;
+  box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.521);
+  transition: all ease 1s;
+}
+
+.cardMuseum h2 {
+  color: rgb(5, 5, 5);
+  text-align: center;
+  font-weight: 700;
+  margin: 50px auto;
+}
+
+.imgM  {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 70px  0 70px 0;
+}
+
+
+
+.cardMuseum .cardBtm  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+  
+ 
+.cardMuseum:hover  {
+  border: 4px solid rgb(255, 0, 64);
+ 
+}
+
+
+.cardBtm1 {
+  background-color: rgb(0, 253, 0);
+  color: white;
+}
+
+.cardBtm1:hover {
+  background-color: white;
+  color:rgb(0, 253, 0);
+  border: 2px solid  rgb(0, 253, 0);
+}
+
+.cardBtm2 {
+  background-color: rgb(139, 9, 172);
+  color: white;
+}
+
+.cardBtm2:hover {
+  background-color: white;
+  color: rgb(139, 9, 172);
+  border: 2px solid   rgb(139, 9, 172);
+}
+
+.cardBtm3 {
+  background-color: rgb(214, 180, 29);
+  color: white;
+}
+
+.cardBtm3:hover {
+  background-color: white;
+  color: rgb(214, 180, 29);
+  border: 2px solid rgb(214, 180, 29);
+}
+
+
+/* Statue of Liberty */
+
+#statue {
+  background-size: cover;
+  background: url('../img/Sights/statue.jpeg')  no-repeat;
+  height: 800px;
+  background-attachment: fixed;
+  background-position: left;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  z-index: 8;
+}
+
+.desStatue {
+  background: rgba(122, 149, 172, 0.534);
+  padding: 20px;
+  width: 400px; 
+  height: 300px;
+  color: rgb(248, 240, 240);
+  text-align: center;
+}
+  
+.desStatue h1 {
+  color: rgb(255, 230, 5);
+}
+    
+.buttomStatue {
+  display: block;
+  background:blue;
+  width: 120px;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid blue;
+  padding-top: 20px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.buttomStatue:hover {
+  box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+  background:rgba(255, 255, 255, 0);
+}
+
+
+/* Empire State Building */
+#empire {
+  display: grid;
+  grid-template-columns:  500px  500px;
+  grid-template-rows:  600px;
+  align-content: space-between;
+  justify-content: space-around;
+  background: url('../img/Sights/Empire/empireBack.jpeg')  no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 30px;
+  background-size: cover;
+  position: relative;
+  z-index: 8;
+  clip-path: polygon(28% 9%, 100% 0, 100% 100%, 79% 90%, 0 100%, 0 0);
+  margin-top: -7vw;
+  margin-bottom: -7vw;
+}
+
+.empImg {
+  overflow: hidden;
+  position: relative;
+  border: 2px solid black;
+}
+
+.comper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.comper img {
+  width: 500px;
+  height: 600px;
+}
+ 
+#showText {
+  max-height: 285px;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(6, 253, 88, 1), rgba(0, 247, 255, 1));
+  transition: max-height 1s;
+  padding: 18px;
+  border: 5px double rgb(235, 16, 100);
+}
+
+#showText.moreText{
+  max-height: 440px;
+  transition: max-height 1s;
+}
+
+
+#desEmpire h1 {
+    text-align: center;
+    color: rgb(235, 16, 100);
+    font-family: 'Amarante', cursive;
+}
+
+#desEmpire  p {
+  text-indent: 15px;
+  text-align: justify;
+  color: #2e0536;
+  font-size: 16px;
+  font-family: 'Amarante', cursive;
+}
+
+#buttomEmpire {
+  display: block;
+  margin: 5px auto;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  background-color: rgb(58, 5, 94); 
+  border: 2px inset yellow;
+  border-radius: 20px;
+  box-shadow: 1.5px 1.5px 0px white;
+  color: yellow;  
+  font-weight: bold;
+  cursor: pointer;
+}
+  
+#buttomEmpire:hover {background-color: rgb(120, 14, 219);}
+  
+/* Brooklyn Bridge */
+
+#brooklyn {
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr 1fr;
+  grid-template-rows: repeat(1, minmax(500px, 500px));
+  padding: 250px 100px ;
+  background: 	#C0C0C0;
+  position: relative;
+}
+
+.leftBr {
+  background: rgb(249, 253, 0);
+  grid-column: 1/3;
+  grid-row: 1/1;
+  z-index: 2;
+  transform: translateX(-20px);
+  transition: transform 1s;
+  transform: skewX(-15deg);
+  background-size: cover;
+  background: url('../img/Sights/leftRight.jpeg')  no-repeat;
+}
+
+.desBrooklyn {
+  background: rgb(255, 255, 255);
+  grid-column: 2/4;
+  color: #000000;
+  text-align: center;
+  grid-row: 1/1;
+  z-index: 1;
+  background: url('../img/Sights/brooklyn.jpeg')  no-repeat; 
+  background-size: cover;
+  position: relative;
+  padding: 22px;
+  font-size: 23px;
+  font-family: 'Sancreek', cursive;
+}
+
+.desBrooklyn p {
+  position: absolute;
+  bottom: 0px;
+  right: 8px;
+  display:none;
+  color: #ffffff;
+  text-align: center;
+  
+}
+
+.desBrooklyn h1 {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  
+}
+
+.rightBr {
+  background: rgb(0, 253, 0);
+  grid-column: 3/5;
+  grid-row: 1/1;
+  z-index: 2;
+  transform: translateX(20px);
+  transition: transform 1s;
+  transform: skewX(15deg);
+  background: url('../img/Sights/leftRight.jpeg')  no-repeat;
+}
+
+.hoverBrooklyn {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  color: rgb(255, 138, 4);
+  font-size: 25px;
+  font-weight: 900;    
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+.desBrooklyn:hover > div.hoverBrooklyn {
+  display: none;
+}
+
+.desBrooklyn:hover > p {
+  display: block;
+}
+
+ 
+.desBrooklyn:hover ~ div.rightBr {
+  transform: translateX(325px);
+}
+
+.desBrooklyn:hover ~ div.leftBr {
+  transform: translateX(-325px);
+}
+
+ 
+#brooklyn::before, #brooklyn::after{
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  bottom: -1rem;
+  z-index: 0;
+  background:#C0C0C0;
+}
+
+#brooklyn::before {
+  right: 50%;
+  transform: skew(0, 20deg);
+}
+
+#brooklyn::after {
+  left: 50%;
+  transform: skew(0, -20deg);
+}
+  
+  
+/*  Broad way */
+
+#broadway {
+  background-color: rgb(14, 13, 13);
+  height: auto;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.signboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.desBroadway {
+  padding: 50px;
+  margin: 0;
+  position: relative;
+}
+
+h1.neon-heading {
+  color: #fff;
+  font-family: 'Dosis', Calibri, sans-serif;
+  text-transform: uppercase;
+  font-size: 150px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+h1.neon-heading.first {
+  text-shadow: 0px 0px 10px #9D00FF,
+              0px 0px 20px #9D00FF,
+              0px 0px 30px #9D00FF,
+              0px 0px 40px #9D00FF,
+              0px 0px 50px #9D00FF,
+              0px 0px 60px #9D00FF;
+}
+
+h1.neon-heading.second {
+  text-shadow: 0px 0px 10px rgb(51, 255, 44),
+              0px 0px 20px rgb(51, 255, 44),
+              0px 0px 30px rgb(51, 255, 44),
+              0px 0px 40px rgb(51, 255, 44),
+              0px 0px 50px rgb(51, 255, 44),
+              0px 0px 60px rgb(51, 255, 44);
+  animation: pulsating 3s infinite;
+}
+
+/* FLICKERING */
+span.flickering-1 {
+    animation: flickering-1 6s infinite;
+}
+span.flickering-2 {
+    animation: flickering-2 3s infinite;
+}
+span.flickering-3 {
+    animation: flickering-3 5s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes pulsating {
+    0%, 100% {
+        text-shadow: 0px 0px 0px;
+        opacity: 0;
+    }
+    50% {
+        text-shadow: 0px 0px 10px  rgb(51, 255, 44),
+            0px 0px 20px rgb(51, 255, 44),
+            0px 0px 30px rgb(51, 255, 44),
+            0px 0px 40px  rgb(51, 255, 44),
+            0px 0px 50px  rgb(51, 255, 44),
+            0px 0px 60px  rgb(51, 255, 44);
+        opacity: 1;
+    }
+}
+
+@keyframes flickering-1 {
+    0% { opacity: 1; }
+    52% { opacity: 1; }
+    55% { opacity: 0; }
+    56% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes flickering-2 {
+    0% { opacity: 1; }
+    62% { opacity: 1; }
+    65% { opacity: 0; }
+    66% { opacity: 1; }
+    69% { opacity: 0; }
+    70% { opacity: 1; }
+    73% { opacity: 0; }
+    74% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes flickering-3 {
+    0% { opacity: 1; }
+    82% { opacity: 1; }
+    84% { opacity: 0; }
+    85% { opacity: 1; }
+    87% { opacity: 0; }
+    88% { opacity: 1; }
+    90% { opacity: 0; }
+    91% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+
+.wire {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  height: 500px;
+}
+
+.wire ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.wire  li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 15px;
+  animation: even-flash 1s both infinite;
+}
+
+.wire li:nth-child(odd){
+  animation: odd-flash 1s both infinite;
+}
+
+
+@keyframes even-flash {
+  0%, 100% {
+      background: rgba(255,230,65,1);
+      box-shadow: 0px 2px 20px 4px rgba(255,230,65,1);
+  }
+
+  50% {
+      background: rgba(255,230,65,0.5);
+      box-shadow: 0px 2px 20px 4px rgba(255,230,65,0.3);
+  }
+}
+
+
+@keyframes odd-flash {
+  50% {
+      background: rgba(255,230,65,1);
+      box-shadow: 0px 2px 20px 4px rgba(255,230,65,1);
+  }
+
+  0%, 100% {
+      background: rgba(255,230,65,0.5);
+      box-shadow: 0px 2px 20px 4px rgba(255,230,65,0.3);
+  }
+}
+
+
+/* SliderCarusel  */
+
+#broadwaySlider {
+  width: 1320px;
+  height: 400px;
+  position: relative;
+  margin: 25px auto;
+  overflow: hidden;
+}
+
+#rowSlider {
+   background: #9D00FF;
+   width: 3870px;
+   position: relative;
+   left:0;
+   transition: all ease 1s;
+}
+
+#rowSlider img {
+  float:left;
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  margin: 20px 0 20px 30px;
+  box-shadow: -1px 11px 11px -8px rgba(0,222,247,1);
+}
+
+#rowSlider::arter {
+ content: "";
+ display: block;
+ clear: both;
+}
+
+#iconArrow {
+  margin: 0 auto;
+  width: 100px;
+  display: block;
+  background: rgba(255, 255, 255, 0);
+  color: rgb(60, 255, 0);
+  font-size: 50px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+#iconArrow:hover {
+  color: rgba(60, 255, 0, 0.459);
+}
+
+
+
+/* Central Park */
+
+#park {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100px, auto));
+  grid-template-rows: repeat(5, minmax(150px, auto));
+  grid-gap: 40px;
+  padding: 50px 50px 150px;
+  background: url('../img/Sights/Park/parkBack.jpeg')  no-repeat;
+  background-size: cover;
+}
+
+.block {
+  box-shadow: -4px 6px 4px 1px rgba(3,1,3,0.81);
+}
+
+
+.block1 {
+  grid-column: 3/6;
+  grid-row: 3/4;
+  background: url('../img/Sights/Park/park1.jpg')  no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: rgb(251, 255, 0);
+  padding: 50px;
+  font-size: 90px;
+  letter-spacing: 25px;
+  font-family: 'Cookie', cursive;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px red;
+  border-radius: 120px;
+  transition: transform 0.5s;
+}
+
+.block1:hover {
+  transform: scale(1.05);
+}
+
+
+.block2 {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background: url('../img/Sights/Park/park2.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+ }
+
+ 
+
+.block3 {
+  grid-column: 4/7;
+  grid-row: 1/3;
+  background: url('../img/Sights/Park/park3.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+ }
+
+.block4 {
+  grid-column: 6/7;
+  grid-row: 3/6;
+  background: url('../img/Sights/Park/park4.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.block5 {
+  grid-column: 3/6;
+  grid-row: 4/6;
+  background: url('../img/Sights/Park/park5.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.block6 {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  background: url('../img/Sights/Park/park6.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.block7 {
+  grid-column: 1/3;
+  grid-row: 2/4;
+  background: url('../img/Sights/Park/park7.jpeg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+ }
+
+.block8 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background: url('../img/Sights/Park/park8.jpeg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.block9 {
+  grid-column: 2/3;
+  grid-row: 4/6;
+  background: url('../img/Sights/Park/park9.jpeg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.block10 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background: url('../img/Sights/Park/park10.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* Footer  */
+
+footer {
+  position: relative;
+  padding: 80px 0 40px  0;
+  background: rgb(0, 0, 0);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(1, minmax(200px, auto));
+  justify-content: space-around;
+  border-top: 2px solid black;
+ }
+
+.footercollum {
+text-align: center;
+font-size: 15px;
+position: relative;
+
+}
+
+.footercollum h2 {
+color: rgb(0, 250, 229);
+font-size: 30px;
+}
+
+
+
+footer ul {
+list-style-type: none;
+margin: auto;
+padding: 0;
+}
+
+
+footer .fab {
+padding: 10px;
+font-size: 30px;
+width: 60px;
+text-align: center;
+text-decoration: none;
+margin: 15px;
+color: white;
+}
+
+footer .fab:hover {
+opacity: 0.7;
+}
+
+footer .fa-facebook-f {
+background: #3B5998;
+}
+
+footer .fa-twitter {
+background: #55ACEE;
+}
+
+footer .fa-google-plus-g {
+background: #ec270d;
+}
+
+footer .far, .fas {
+margin: 15px;
+}
+
+.loginBox {
+background: #0c0c0c;
+border: 2px solid rgb(255, 196, 0);
+padding: 15px;
+}
+
+.footercollum .loginBox img {
+width: 100px;
+height: 100px;
+position: absolute;
+top: -50px;
+left: 100px;
+}
+
+.loginBox h2 {
+padding: 55px 0  15px 0;
+font-size: 22px;
+color: white;
+margin: 0;
+}
+
+.loginBox p {
+padding: 0;
+margin: 0;
+font-weight: bold;
+text-align: left;
+}
+
+.loginBox input {
+width: 100%;
+margin-bottom: 20px;
+border: none;
+outline: none;
+height: 40px;
+}
+
+.loginBox input[type="text"], input[type="email"] {
+border-bottom: 1px solid #fff;
+background: transparent;
+color: rgb(201, 201, 201);
+font-size: 16px;
+}
+
+.loginBox input[type="submit"] {
+background: #fb2525;
+color: #fff;
+font-size: 18px;
+border-radius: 20px;
+}   
+
+.loginBox input[type="submit"]:hover {
+cursor: pointer;
+background: #ffc107;
+color: #000;
+}
+
+.loginBox a {
+text-decoration: none;
+font-size: 12px;
+line-height: 20px;
+color: darkgray;
+}
+
+.loginBox a:hover {
+ color: #ffc107;
+}
+
+
+
+
+
+/* For small screen  */
+
+
+@media screen and (max-width: 700px) {
+
+  /* Header  */
+  nav ul.mainList {
+    grid-template-columns: repeat(1, minmax(250px, auto));
+  }
+
+  .gridHeader {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+   
+  }
+
+  .gridHeaderText h1 {
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  
+  .gridHeaderText p {
+    font-size: 30px;
+  }
+
+  /* 3D card  */
+  .maincontainer{
+    width: 300px;
+    height: 195px;
+  }
+
+  .thefront img, .theback img{
+    height: 150px;
+  }
+  
+  
+  .thefront h1, .theback h1{
+    max-height: auto;
+    font-size: 15px;
+  }
+  
+  /*Letter WHY NYC  */
+
+  .letter {
+    padding: 23px 0;
+    font-size: 35px;
+  }
+
+  #letterSect {
+    height: 100px;
+  }
+
+   
+  footer {
+      grid-template-columns: repeat(1, 300px);
+      grid-gap: 60px;
+      padding: 20px 0 20px  0;
+    }
+
+    
+}
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 701px) {
+
+  footer {
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 60px;
+    padding: 20px 0 20px  0;
+  }
+
+  /* 3D card  */
+  .maincontainer{
+    width: 320px;
+    height: 215px;
+  }
+
+  .thefront img, .theback img{
+    height: 170px;
+  }
+
+  .thefront h1, .theback h1{
+    font-size: 16px;
+  }
+
+
+
+
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 701px) {
+
+#sights h1 {
+    
+  font-size: 55px;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+
+}
+
+.textTimes {
+  
+  font-size: 15px;
+  
+ 
+}
+
+.textTimes h1 {
+  font-size: 45px;
+ 
+}
+
+#museum {
+  grid-template-columns: repeat(1, minmax(300px, 400px));
+  grid-template-rows: repeat(3, minmax(500px, auto));
+  grid-gap: 30px;
+  padding: 150px 20px 100px 20px;
+  margin-top: -15vw;
+}
+
+
+#statue {
+  margin-bottom: -18vw;
+}
+
+#empire {
+  grid-template-columns: 500px;
+  grid-template-rows: 600px  600px;
+  
+}
+
+ #brooklyn {
+   
+  margin-top: -30vw;
+  padding-top: 300px; 
+  
+} 
+
+
+.desBrooklyn {
+  font-size: 16px;
+}
+
+.hoverBrooklyn {
+  font-size: 20px;
+}
+
+
+
+h1.neon-heading {
+  font-size: 110px;
+ }
+
+
+ .wire  li {
+   width: 30px;
+   height: 30px;
+ }
+
+ #broadwaySlider {
+   width: 450px;
+   height: 400px;
+ }
+
+
+ .block1 {
+  font-size: 60px;
+  letter-spacing: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+  #sights h1 {
+    
+    font-size: 40px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+  
+  }
+
+  .textTimes {
+    font-size: 12px;
+   line-height: 22px;
+   
+  }
+  
+  .textTimes h1 {
+    font-size: 40px;
+  }
+
+
+
+  #museum {
+    grid-template-columns: repeat(1, minmax(300px, 400px));
+    grid-template-rows: repeat(3, minmax(500px, auto));
+    grid-gap: 30px;
+    padding: 150px 20px 100px 20px;
+    margin-top: -25vw;
+  }
+
+
+
+  #statue {
+    margin-bottom: -35vw;
+  }
+
+  #empire {
+    grid-template-columns: 350px;
+    grid-template-rows: 600px  600px;
+  }
+
+  #empire p {
+   font-size: 14px;
+}
+
+
+  #empire  h1 {
+    font-size: 16px;
+  }
+
+  #brooklyn {
+   
+    grid-template-columns: 1fr;
+     margin-top: -40vw;
+    padding-top: 300px; 
+    
+  }
+
+  .leftBr {
+   display: none;
+  }
+
+  .rightBr{
+    display: none;
+  }
+
+
+  .desBrooklyn {
+    grid-column: 1/5;
+  }
+
+  .desBrooklyn {
+    font-size: 16px;
+  }
+
+  .hoverBrooklyn {
+    font-size: 16px;
+  }
+  
+
+  h1.neon-heading {
+   font-size: 70px;
+  }
+
+
+  .wire  li {
+    width: 20px;
+    height: 20px;
+  }
+
+  #broadwaySlider {
+    width: 450px;
+    height: 400px;
+  }
+
+
+
+  #park {
+    grid-template-columns: repeat(1, minmax(100px, auto));
+    grid-template-rows: repeat(10, minmax(150px, auto));
+  }
+  
+  .block {
+  grid-column: 1/1;
+  grid-row: auto/auto;
+ 
+  }
+
+  .block1 {
+    font-size: 60px;
+    letter-spacing: 20px;
+    }
+}
